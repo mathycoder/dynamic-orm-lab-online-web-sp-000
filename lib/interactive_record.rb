@@ -53,7 +53,7 @@ class InteractiveRecord
       SELECT * FROM #{self.table_name}
       WHERE name = '#{name}' 
     }
-    DB[:conn].execute(sql)
+    the_hash = DB[:conn].execute(sql)
     binding.pry
   end 
 end
