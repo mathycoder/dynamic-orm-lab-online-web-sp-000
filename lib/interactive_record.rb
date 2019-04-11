@@ -55,6 +55,5 @@ class InteractiveRecord
     }
     the_hash = DB[:conn].execute(sql)
     # DB[:conn].execute("SELECT * FROM #{self.table_name} WHERE name = '#{name}'")
-    binding.pry
   end 
 end
