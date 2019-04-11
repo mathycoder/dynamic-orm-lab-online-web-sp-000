@@ -54,5 +54,6 @@ class InteractiveRecord
       WHERE name = '#{name}' 
     }
     DB[:conn].execute(sql)
+    binding.pry
   end 
 end
