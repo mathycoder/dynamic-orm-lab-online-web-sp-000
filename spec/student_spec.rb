@@ -113,7 +113,7 @@ describe Student do
   describe '.find_by' do 
     it 'executes the SQL to find a row by the attribute passed into the method' do 
       Student.new({name: "Susan", grade: 10}).save
-      expect(Student.find_by({name: "Susan"})).to eq([{"id"=>1, "name"=>"Susan", "grade"=>10, 0=>1, 1=>"Susan", 2=>10}])
+      expect(Student.find_by({name: "Susan"})).to eq([{"id"=>1, "name"=>"Susan", "grade"=>10}])
     end
 
     it 'accounts for when an attribute value is an integer' do
