@@ -56,6 +56,8 @@ class InteractiveRecord
     the_hash = DB[:conn].execute(sql)
   end 
   
-  def self.find_by(attribute)
+  def self.find_by(attribute_hash)
+    attribute_hash.each do |key, value|
+    end 
   end 
 end
