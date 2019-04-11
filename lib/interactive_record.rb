@@ -56,4 +56,6 @@ class InteractiveRecord
     the_hash = DB[:conn].execute(sql)
     # DB[:conn].execute("SELECT * FROM #{self.table_name} WHERE name = '#{name}'")
   end 
+  
+  def self.find_by(attribut)
 end
