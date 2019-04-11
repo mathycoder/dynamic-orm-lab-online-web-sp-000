@@ -60,7 +60,7 @@ class InteractiveRecord
     attribute_hash.each do |key, value|
       sql = %{
         SELECT * FROM #{self.table_name}
-        WHERE #{key.to_s} = #{'value'}
+        WHERE #{key.to_s} = #{value}
       }
       binding.pry 
       DB[:conn].execute(sql)  
