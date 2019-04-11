@@ -58,6 +58,7 @@ class InteractiveRecord
   
   def self.find_by(attribute_hash)
     attribute_hash.each do |key, value|
+      binding.pry 
     end 
   end 
 end
