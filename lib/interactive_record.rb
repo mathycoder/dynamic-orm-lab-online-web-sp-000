@@ -57,15 +57,12 @@ class InteractiveRecord
   end 
   
   def self.find_by(attribute_hash)
-    attribute_hash.each do |key, value|
+    attribute_hash.map do |key, value|
       sql = %{
         SELECT * FROM #{self.table_name}
         WHERE #{key.to_s} = '#{value}'
       }
-      binding.pry 
       DB[:conn].execute(sql)  
-        
-      
     end.first  
   end 
 end
