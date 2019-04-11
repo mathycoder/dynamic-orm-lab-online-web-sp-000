@@ -60,7 +60,8 @@ class InteractiveRecord
     attribute_hash.each do |key, value|
       binding.pry 
       sql = %{
-        
+        SELECT * FROM #{self.table_name}
+        WHERE #{
         
         
       }
